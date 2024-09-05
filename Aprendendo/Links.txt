@@ -1,0 +1,8 @@
+📎 FONTES E ICONES
+https://cdnjs.com/libraries/font-awesome 
+https://fontawesome.com/
+
+📎 ERROS DE RESPOSTAS HTTP 
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
+
+https://github.com/luizomf/curso-django-projeto1.git

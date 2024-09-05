@@ -1,0 +1,55 @@
+👽''' "Para  criar um ambiente virtural"
+python -m venv venv 
+
+👽''' "Interpreter"
+Apos criar o ambiente virtual temos qu dar um CTRL+Shift_p e selecionar - python selected interpreter
+
+⁂ atalhos pelo terminal 
+mkdir qualque_nome = cria pasta 
+
+
+👽'''
+"Ativação do ambiente venv"
+no powershell execute o comando abaixo 
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+Depois disso tentamos ativar o ambiente na IDE com comando 
+🚩.\venv\scripts\activate
+python manage.py runserver
+Para desativar - deactivate
+
+👽''' "Atualizações"
+para realizer uma atualização 
+pip install pip --upgrade
+pip install django --upgrade
+
+🐱‍🏍sempre instalar 
+pip install pip setuptools wheel --upgrade
+pip install django
+pip install mypy
+pip install flake8
+pip install autopep8
+
+Extensoes
+omtheme
+material icon themes
+
+👽''' "django-admin --help - python manage.py runserver"
+django-admin --help *nos retorna uma lista de comandos
+🚩python manage.py runserver - acessa o servidor
+
+👽''' 
+"para iniciar um projeto usamos" 
+django-admin startproject nome_do_projeto . (Lembrando do espaço e ponto para indicar onde sera criado o projeto)
+* para fazer com que o projeto seja criado na raiz usamos o espaço ponto
+(OBS só usamos o django-admin startproject para criar o projeto inicial, depois disso vamos sempre criar com python manage.py qualquer_coisa) 
+
+
+
+Em Django vamos nos referir sempre com se estivéssimos na raiz do projeto 
+
+Test.
+Para criar testes temos que iniciar o nome sempre como test_alguma.coisa.py
+
+pastas que faltam .mypy_cache
+
+{%   %} include - serve para executar uma tarefa
