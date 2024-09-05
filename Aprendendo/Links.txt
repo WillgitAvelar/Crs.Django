@@ -4,5 +4,5 @@ https://fontawesome.com/
 
 📎 ERROS DE RESPOSTAS HTTP 
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
-
-https://github.com/luizomf/curso-django-projeto1.git
+https://github.com/luizomf/curso-django-projeto1.git 
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
