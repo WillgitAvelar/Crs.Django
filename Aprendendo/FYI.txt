@@ -1,3 +1,5 @@
+Documentação  > https://docs.djangoproject.com/en/5.1/
+
 👽''' "Para  criar um ambiente virtural"
 python -m venv venv 
 
