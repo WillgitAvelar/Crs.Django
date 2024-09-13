@@ -55,3 +55,4 @@ Para criar testes temos que iniciar o nome sempre como test_alguma.coisa.py
 pastas que faltam .mypy_cache
 
 {%   %} include - serve para executar uma tarefa
+
