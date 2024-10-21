@@ -56,3 +56,5 @@ pastas que faltam .mypy_cache
 
 {%   %} include - serve para executar uma tarefa
 
+Para criar um super usuario 
+Python manage.py createsuperuser

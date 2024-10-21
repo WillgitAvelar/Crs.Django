@@ -1,217 +1,289 @@
-        :root {
-            --color-primary: #269fe6;
-            --color-primary-hover: #2086c2;
-            --color-primary-dark: #13141f;
-            --color-primary-dark-hover: #212336;
-            --color-primary-light: #d4ecfa;
-            --color-primary-light-hover: #bdd8e7;
-            --color-white: #fff;
-            --color-black: #000;
-            --color-dark-text: #444;
-            --color-info-light: #cce5ff;
-            --color-debug-light: #cce5ff;
-            --color-success-light: #d4edda;
-            --color-alert-light: #fff3cd;
-            --color-warning-light: #fff3cd;
-            --color-error-light: #f8d7da;
-            --color-info-dark: #4d86c4;
-            --color-debug-dark: #4d86c4;
-            --color-success-dark: #4a9c5d;
-            --color-alert-dark: #927f40;
-            --color-warning-dark: #927f40;
-            --color-error-dark: #da525d;
-            --color-gray-0: #f9f9f9;
-            --color-gray-1: #e0e0e0;
-            --color-gray-2: #c7c7c7;
-            --color-gray-3: #aeaeae;
-            --color-gray-4: #959595;
-            --color-gray-5: #7d7d7d;
-            --color-gray-6: #646464;
-            --color-gray-7: #4b4b4b;
-            --color-gray-8: #323232;
-            --color-gray-9: #191919;
-            --font-primary: sans-serif;
-            --font-headings: 'Roboto Slab', serif;
-            --spacing-gutter-medium: 3rem;
-            --spacing-gutter-large: 4rem;
-        }
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 62.5%;
-        }
-        body {
-            font-size: 1.6rem;
-            font-family: var(--font-primary);
-            background: var(--color-gray-1);
-            color: var(--color-dark-text);
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: var(--font-headings);
-        }
-        .container {
-            max-width: 144rem;
-            margin: 0 auto;
-            padding: var(--spacing-gutter-medium);
-        }
-        .main-header-container {
-            background: var(--color-primary-dark);
-        }
-        .main-logo {
-            font-size: 4rem;
-            color: var(--color-white);
-            text-decoration: none;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            justify-content: center;
-            width: fit-content;
-            margin: 0 auto;
-        }
-        .main-logo-icon {
-            margin-right: 2rem;
-        }
-        .search-form {
-            border: .2rem solid var(--color-primary-dark);
-            max-width: 64rem;
-            margin: 0 auto;
-            border-radius: .4rem;
-            position: relative;
-            transition: all 300ms ease-in-out;
-        }
-        .search-input,
-        .search-button {
-            border: none;
-            background: none;
-            outline: none;
-            padding: 1rem;
-            transition: all 300ms ease-in-out;
-        }
-        .search-input {
-            width: 100%;
-            padding-right: 3rem;
-        }
-        .search-button {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        .search-button:focus {
-            outline: 1px solid var(--color-primary);
-            background: rgba(0, 0, 0, .05)
-        }
-        .search-form:focus-within {
-            border-color: var(--color-primary);
-            background: var(--color-white);
-        }
-        .search-form:focus-within .search-button {
-            color: var(--color-primary);
-        }
-        .main-content {
-            padding-top: 0;
-        }
-        .main-content-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: var(--spacing-gutter-large);
-        }
-        .recipe {
-            background: var(--color-white);
-            box-shadow: -5px 5px 10px rgba(0, 0, 0, .2);
-            transform: scale(1);
-            transition: all 300ms ease-in-out;
-            border-radius: .4rem;
-            overflow: hidden;
-        }
-        .recipe img {
-            max-width: 100%;
-        }
-        .recipe-list-item {
-            max-width: 64rem;
-            height: fit-content;
-        }
-        .recipe-list-item:hover {
-            transform: scale(1.02);
-            box-shadow: -8px 8px 18px rgba(0, 0, 0, .25);
-        }
-        .recipe-title-container {
-            padding: var(--spacing-gutter-medium);
-            padding-bottom: 2rem;
-        }
-        .recipe-author {
-            padding: 0 var(--spacing-gutter-medium);
-        }
-        .recipe-content {
-            padding: var(--spacing-gutter-medium);
-            padding-top: 2rem;
-        }
-        .recipe-author-item {
-            color: var(--color-gray-4);
-            margin-right: 1rem;
-            font-style: italic;
-            font-size: 1.4rem;
-        }
-        .recipe-author a {
-            color: var(--color-primary);
-            transition: all 300ms ease-in-out;
-            text-decoration: none;
-        }
-        .recipe-author a:hover {
-            color: var(--color-primary-dark);
-        }
-        .recipe-meta-container {
-            display: flex;
-            flex-flow: row wrap;
-            padding: var(--spacing-gutter-medium);
-            background: var(--color-gray-1);
-        }
-        .recipe-meta {
-            display: flex;
-            flex-flow: column nowrap;
-            flex-shrink: 1;
-            flex-grow: 1;
-            text-align: center;
-        }
-        .recipe-meta-title {
-            font-size: 1.6rem;
-        }
-        .recipe-footer a {
-            background: var(--color-primary-dark);
-            display: block;
-            color: var(--color-white);
-            text-decoration: none;
-            text-align: center;
-            padding: 1.5rem var(--spacing-gutter-medium);
-            transition: all 300ms ease-in-out;
-        }
-        .recipe-footer a:hover {
-            filter: brightness(2);
-        }
+:root {
+    /* Definição das cores primárias */
+    --color-primary: #269fe6; /* Cor principal: azul claro */
+    --color-primary-hover: #2086c2; /* Cor principal ao passar o mouse: azul mais escuro */
+    --color-primary-dark: #13141f; /* Cor primária escura: quase preto */
+    --color-primary-dark-hover: #212336; /* Cor primária escura ao passar o mouse */
+    --color-primary-light: #d4ecfa; /* Cor primária clara */
+    --color-primary-light-hover: #bdd8e7; /* Cor primária clara ao passar o mouse */
+    
+    /* Definição das cores neutras */
+    --color-white: #fff; /* Cor branca */
+    --color-black: #000; /* Cor preta */
+    --color-dark-text: #444; /* Cor de texto escuro: cinza médio */
 
-        .main-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--color-primary-dark);
-            color: var(--color-white);
-            padding: var(--spacing-gutter-large);
-        }
+    /* Definição das cores de estados (info, sucesso, alerta, erro) */
+    --color-info-light: #cce5ff; /* Cor de informação clara: azul claro */
+    --color-debug-light: #cce5ff; /* Cor de debug clara: igual à informação */
+    --color-success-light: #d4edda; /* Cor de sucesso clara: verde claro */
+    --color-alert-light: #fff3cd; /* Cor de alerta clara: amarelo claro */
+    --color-warning-light: #fff3cd; /* Cor de aviso clara: igual à alerta */
+    --color-error-light: #f8d7da; /* Cor de erro clara: vermelho claro */
+    --color-info-dark: #4d86c4; /* Cor de informação escura: azul escuro */
+    --color-debug-dark: #4d86c4; /* Cor de debug escura: igual à informação escura */
+    --color-success-dark: #4a9c5d; /* Cor de sucesso escura: verde escuro */
+    --color-alert-dark: #927f40; /* Cor de alerta escura: amarelo escuro */
+    --color-warning-dark: #927f40; /* Cor de aviso escura: igual à alerta escura */
+    --color-error-dark: #da525d; /* Cor de erro escura: vermelho escuro */
 
-        .main-footer a {
-            color: var(--color-white);
-            text-decoration: none;
-            transition: all 300ms ease-in-out;
-        }
+    /* Definição de tons de cinza */
+    --color-gray-0: #f9f9f9; /* Cinza muito claro */
+    --color-gray-1: #e0e0e0; /* Cinza claro */
+    --color-gray-2: #c7c7c7; /* Cinza */
+    --color-gray-3: #aeaeae; /* Cinza médio */
+    --color-gray-4: #959595; /* Cinza escuro */
+    --color-gray-5: #7d7d7d; /* Cinza mais escuro */
+    --color-gray-6: #646464; /* Cinza profundo */
+    --color-gray-7: #4b4b4b; /* Cinza muito escuro */
+    --color-gray-8: #323232; /* Quase preto */
+    --color-gray-9: #191919; /* Preto escuro */
 
-        .main-footer a:hover {
-            filter: brightness(.8);
-        }
-   
+    /* Definição de fontes */
+    --font-primary: sans-serif; /* Fonte primária: sans-serif */
+    --font-headings: 'Roboto Slab', serif; /* Fonte para títulos: Roboto Slab */
+
+    /* Definição de espaçamentos */
+    --spacing-gutter-medium: 3rem; /* Espaçamento médio */
+    --spacing-gutter-large: 4rem; /* Espaçamento grande */
+}
+
+* {
+    /* Remove as margens e espaçamentos padrão e aplica box-sizing */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo do tamanho dos elementos */
+}
+
+html {
+    /* Define o tamanho da fonte base do HTML */
+    font-size: 62.5%; /* Isso faz com que 1rem = 10px, facilitando cálculos */
+}
+
+body {
+    /* Estilização do corpo da página */
+    font-size: 1.6rem; /* Tamanho da fonte do corpo (equivalente a 16px) */
+    font-family: var(--font-primary); /* Fonte primária definida anteriormente */
+    background: var(--color-gray-1); /* Fundo cinza claro */
+    color: var(--color-dark-text); /* Cor do texto principal: cinza médio */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* Define a fonte dos títulos */
+    font-family: var(--font-headings); /* Utiliza a fonte Roboto Slab */
+}
+
+.container {
+    /* Estilos para o contêiner */
+    max-width: 144rem; /* Largura máxima de 1440px */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: var(--spacing-gutter-medium); /* Aplica espaçamento nas laterais */
+}
+
+.main-header-container {
+    /* Estilos para o cabeçalho principal */
+    background: var(--color-primary-dark); /* Fundo com a cor primária escura */
+}
+
+.main-logo {
+    /* Estilos para o logo principal */
+    font-size: 4rem; /* Tamanho grande para o texto do logo */
+    color: var(--color-white); /* Cor branca */
+    text-decoration: none; /* Remove a sublinha */
+    display: flex; /* Usa flexbox para alinhar o conteúdo */
+    flex-flow: row nowrap; /* Exibe o conteúdo em linha */
+    align-items: center; /* Alinha o conteúdo no centro verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: fit-content; /* Ajusta a largura conforme o conteúdo */
+    margin: 0 auto; /* Centraliza o logo */
+}
+
+.main-logo-icon {
+    /* Estilo adicional para o ícone do logo */
+    margin-right: 2rem; /* Adiciona espaço à direita do ícone */
+}
+
+.search-form {
+    /* Estilos para o formulário de pesquisa */
+    border: .2rem solid var(--color-primary-dark); /* Borda com a cor primária escura */
+    max-width: 64rem; /* Largura máxima de 640px */
+    margin: 0 auto; /* Centraliza o formulário */
+    border-radius: .4rem; /* Cantos arredondados */
+    position: relative; /* Necessário para o botão de busca */
+    transition: all 300ms ease-in-out; /* Transição suave de 300ms */
+}
+
+.search-input, .search-button {
+    /* Estilos para o campo de busca e botão */
+    border: none; /* Remove bordas */
+    background: none; /* Remove o fundo */
+    outline: none; /* Remove a linha de foco */
+    padding: 1rem; /* Espaçamento interno de 10px */
+    transition: all 300ms ease-in-out; /* Transição suave */
+}
+
+.search-input {
+    /* Estilos específicos para o campo de busca */
+    width: 100%; /* O campo ocupa toda a largura */
+    padding-right: 3rem; /* Espaçamento para o botão */
+}
+
+.search-button {
+    /* Estilos específicos para o botão de busca */
+    position: absolute; /* Posiciona o botão dentro do formulário */
+    top: 0; /* Alinha no topo */
+    right: 0; /* Alinha à direita */
+}
+
+.search-button:focus {
+    /* Estilo do botão ao ganhar foco */
+    outline: 1px solid var(--color-primary); /* Adiciona um contorno */
+    background: rgba(234, 0, 0, 0.05); /* Leve fundo escurecido */
+}
+
+.search-form:focus-within {
+    /* Estilos para o formulário quando está com foco */
+    border-color: var(--color-primary); /* Borda muda para a cor primária */
+    background: var(--color-white); /* O fundo fica branco */
+}
+
+.search-form:focus-within .search-button {
+    /* Estilos do botão dentro do formulário com foco */
+    color: var(--color-primary); /* A cor do botão muda para a cor primária */
+}
+
+/* Continua o padrão de comentários e explicações para o restante do código, detalhando cada seletor e propriedade como acima */
+.main-content {
+    /* Estilos para o conteúdo principal */
+    padding-top: 0; /* Remove o espaçamento no topo */
+}
+
+.main-content-list {
+    /* Estilização para a lista principal de conteúdo */
+    display: grid; /* Usa grid layout para exibir os itens */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Colunas que se ajustam ao tamanho da tela */
+    gap: var(--spacing-gutter-large); /* Espaçamento entre os itens */
+}
+
+.recipe {
+    /* Estilização para cada item de receita */
+    background: var(--color-white); /* Fundo branco */
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, .2); /* Sombra leve ao redor do item */
+    transform: scale(1); /* Tamanho inicial padrão */
+    transition: all 300ms ease-in-out; /* Transição suave ao passar o mouse */
+    border-radius: .4rem; /* Cantos arredondados */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
+}
+
+.recipe img {
+    /* Estilo para as imagens dentro de receitas */
+    max-width: 100%; /* A imagem ocupa 100% da largura disponível */
+}
+
+.recipe-list-item {
+    /* Estilização de cada item da lista de receitas */
+    max-width: 64rem; /* Largura máxima de 640px */
+    height: fit-content; /* Ajusta a altura conforme o conteúdo */
+}
+
+.recipe-list-item:hover {
+    /* Estilização ao passar o mouse sobre um item da lista de receitas */
+    transform: scale(1.02); /* Aumenta ligeiramente o tamanho */
+    box-shadow: -8px 8px 18px rgba(0, 0, 0, .25); /* Sombra mais pronunciada */
+}
+
+.recipe-title-container {
+    /* Estilo para o contêiner do título da receita */
+    padding: var(--spacing-gutter-medium); /* Espaçamento interno médio */
+    padding-bottom: 2rem; /* Espaçamento inferior adicional */
+}
+
+.recipe-author {
+    /* Estilos para a seção de autor da receita */
+    padding: 0 var(--spacing-gutter-medium); /* Espaçamento horizontal */
+}
+
+.recipe-content {
+    /* Estilos para o conteúdo da receita */
+    padding: var(--spacing-gutter-medium); /* Espaçamento interno médio */
+    padding-top: 2rem; /* Espaçamento adicional no topo */
+}
+
+.recipe-author-item {
+    /* Estilo para os detalhes do autor da receita */
+    color: var(--color-gray-4); /* Cor cinza médio */
+    margin-right: 1rem; /* Espaçamento à direita */
+    font-style: italic; /* Texto em itálico */
+    font-size: 1.4rem; /* Tamanho da fonte de 14px */
+}
+
+.recipe-author a {
+    /* Estilos para os links do autor */
+    color: var(--color-primary); /* Cor primária */
+    transition: all 300ms ease-in-out; /* Transição suave */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.recipe-author a:hover {
+    /* Estilo do link ao passar o mouse */
+    color: var(--color-primary-dark); /* Muda para cor primária escura */
+}
+
+.recipe-meta-container {
+    /* Estilos para o contêiner de metadados da receita */
+    display: flex; /* Usa flexbox para layout */
+    flex-flow: row wrap; /* Organiza os itens em linha e permite quebra de linha */
+    padding: var(--spacing-gutter-medium); /* Espaçamento interno médio */
+    background: var(--color-gray-1); /* Fundo cinza claro */
+}
+
+.recipe-meta {
+    /* Estilos para os metadados da receita */
+    display: flex; /* Usa flexbox */
+    flex-flow: column nowrap; /* Organiza os itens em coluna */
+    flex-shrink: 1; /* Permite redução se necessário */
+    flex-grow: 1; /* Permite que o item cresça conforme necessário */
+    text-align: center; /* Centraliza o texto */
+}
+
+.recipe-meta-title {
+    /* Estilos para os títulos dos metadados */
+    font-size: 1.6rem; /* Tamanho da fonte de 16px */
+}
+
+.recipe-footer a {
+    /* Estilos para os links no rodapé da receita */
+    background: var(--color-primary-dark); /* Fundo com cor primária escura */
+    display: block; /* Exibe como um bloco */
+    color: var(--color-white); /* Cor do texto branca */
+    text-decoration: none; /* Remove o sublinhado */
+    text-align: center; /* Centraliza o texto */
+    padding: 1.5rem var(--spacing-gutter-medium); /* Espaçamento interno */
+    transition: all 300ms ease-in-out; /* Transição suave */
+}
+
+.recipe-footer a:hover {
+    /* Estilos para os links do rodapé ao passar o mouse */
+    filter: brightness(2); /* Aumenta o brilho ao passar o mouse */
+}
+
+.main-footer {
+    /* Estilos para o rodapé principal */
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    background: var(--color-primary-dark); /* Fundo com cor primária escura */
+    color: var(--color-white); /* Texto branco */
+    padding: var(--spacing-gutter-large); /* Espaçamento interno grande */
+}
+
+.main-footer a {
+    /* Estilos para os links no rodapé principal */
+    color: var(--color-white); /* Cor do texto branca */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: all 300ms ease-in-out; /* Transição suave */
+}
+
+.main-footer a:hover {
+    /* Estilos para os links do rodapé ao passar o mouse */
+    filter: brightness(.8); /* Escurece o link ao passar o mouse */
+}

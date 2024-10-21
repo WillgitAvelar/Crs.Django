@@ -1,19 +1,15 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
+    "version": "0.2.0", // Versão da configuração do arquivo launch.json
     "configurations": [
-        
         {
-            "name": "Python: Django",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/manage.py",
+            "name": "Python: Django", // Nome da configuração para fácil identificação
+            "type": "python", // Define o tipo de ambiente, neste caso, Python
+            "request": "launch", // Define o tipo de ação a ser tomada, "launch" para iniciar a aplicação
+            "program": "${workspaceFolder}/manage.py", // Especifica o programa a ser executado, aqui o manage.py do Django
             "args": [
-                "runserver"
+                "runserver" // Argumento passado para o manage.py, no caso, iniciar o servidor com 'runserver'
             ],
-            "django": true
+            "django": true // Indica que esta configuração é específica para um projeto Django
         }
     ]
 }
