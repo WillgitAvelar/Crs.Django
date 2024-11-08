@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <!-- Declaração do tipo de documento HTML e o idioma da página como Português do Brasil -->
 
 <head>
     {% include 'recipes/partials/head.html' %}
-    <!-- Inclui o arquivo head.html, onde geralmente estão as configurações de meta tags, links para CSS, etc. -->
-    
     <title>{% block title %}{% endblock title %} Recipes</title>
-    <!-- Bloco que permite que o título da página seja alterado dinamicamente, com um título padrão 'Recipes' -->
 </head>
 
 <body>
     {% include 'recipes/partials/header.html' %}
-    <!-- Inclui o arquivo header.html, que provavelmente contém o cabeçalho da página (logo, menu de navegação, etc.) -->
-
     {% include 'recipes/partials/search.html' %}
-    <!-- Inclui o arquivo search.html, que provavelmente contém o formulário de busca para receitas -->
 
     <main class="main-content-container">
         {% block content %}{% endblock content %}
-        <!-- Bloco de conteúdo principal, onde cada página individual pode definir o seu próprio conteúdo -->
+        {% include 'recipes/partials/pagination.html' %}
     </main>
 
     {% include 'recipes/partials/footer.html' %}
-    <!-- Inclui o arquivo footer.html, que provavelmente contém o rodapé da página (informações de contato, links, etc.) -->
 </body>
+
 </html>
